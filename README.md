@@ -2,7 +2,7 @@ script for ai slop game
 
 credits k1las1k for the [fling script](https://scriptblox.com/script/Universal-Script-KEYLESS-op-FLING-gui-44195)
 
-credit for ma goat [vaehz](https://wearentdevs.net), he made the lib 
+credits ma goat [vaehz](https://wearentdevs.net), he made the lib 
 
 
 ```
