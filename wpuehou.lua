@@ -15,6 +15,7 @@ local VirtualUser = game:GetService("VirtualUser")
 local CalmLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/IcantAffordSynapse/calmlib/refs/heads/main/src.lua"))()
 local window = CalmLib:win("inveztour")
 local section = window:tab("asd123", "rbxassetid://6034288294")
+local passSection = window:tab("larpGamepass", "rbxassetid://6034288294")
 local settingsSection = window:tab("settin' ", "rbxassetid://99579688577014")
 local funSection = window:tab("fun", "rbxassetid://109121102062195")
 
@@ -77,6 +78,21 @@ createSwitch(section, "autoFire", true, function()
         end
     end
 end)
+
+local passBypass = {
+    {"noTax", "FreeTax", true}, {"2xIncome", "DoubleIncome", true}, 
+    {"2xToken", "DoubleToken", true}, {"fireFighter", "Firefighters", false},
+    {"passiveIncome", "PassiveIncome", true}, {"professional", "Professional", true}, 
+    {"3xStock", "TripleStock", true}
+}
+
+for _, p in pairs(passBypass) do
+    createSwitch(passSection, p[1], p[3], function()
+        if LocalPlayer:FindFirstChild("Gamepass") and LocalPlayer.Gamepass:FindFirstChild(p[2]) then
+            LocalPlayer.Gamepass[p[2]].Value = true
+        end
+    end)
+end
 
 settingsSection:toggle("antiAFK", true, function(bool)
     getgenv().antiafk = bool
