@@ -3,3 +3,5 @@ credits k1las1k for making the [fling script](https://scriptblox.com/script/Univ
 
 
 ``` lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/unctrlAble/investorCenterscript/refs/heads/main/wpuehou.lua"))()
+```
