@@ -5,6 +5,7 @@ local LocalPlayer = Players.LocalPlayer
 local Workspace = game:GetService("Workspace")
 local Lighting = game:GetService("Lighting")
 local VirtualUser = game:GetService("VirtualUser")
+local RunService = game:GetService("RunService")
 
 local CalmLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/IcantAffordSynapse/calmlib/refs/heads/main/src.lua"))()
 local window = CalmLib:win("inveztour")
@@ -100,6 +101,10 @@ settingsSection:toggle("fullBright", true, function(bool)
     end
 end)
 
+settingsSection:toggle("disable3DRendering", false, function(bool)
+    RunService:Set3dRenderingEnabled(not bool)
+end)
+
 funSection:button("flingPlayer", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/K1LAS1K/Ultimate-Fling-GUI/main/flingscript.lua"))()
 end)
@@ -107,4 +112,5 @@ end)
 window.OnDestroy = function()
     for _, name in pairs(toggleNames) do getgenv()[name] = false end
     getgenv().antiafk = false
+    RunService:Set3dRenderingEnabled(true)
 end
