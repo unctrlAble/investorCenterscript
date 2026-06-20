@@ -1,9 +1,3 @@
---[[
-	credits to K1LAS1K for the fling script
-  ths script is js made for fun so like ig u can do wtv u want w/ it
-  my friend likes this game so i think it's funny to make a script about it
-]]
-
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Events = ReplicatedStorage:WaitForChild("Events")
 local Players = game:GetService("Players")
