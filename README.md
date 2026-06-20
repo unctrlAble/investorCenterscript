@@ -1,2 +1,1 @@
-# investorCenterscript
-investor center script (ai slop)
+script for ai slop game 
